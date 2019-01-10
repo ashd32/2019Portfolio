@@ -301,6 +301,8 @@ h3 {
 footer {
   padding: 25px 0;
   text-align: center;
+  background-color: #212529;
+  color: white;
 }
 
 footer span.copyright {
@@ -330,10 +332,10 @@ ul.social-buttons li a {
   height: 50px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: white;
+  color: #212529;
   border-radius: 100%;
   outline: none;
-  background-color: #212529;
+  background-color: white;
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
