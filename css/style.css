@@ -66,3 +66,231 @@ h3 {
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */body{overflow-x:hidden;font-family:'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}p{line-height:1.75}a{color:#fed136}a:hover{color:#fec503}.text-primary{color:#fed136!important}h1,h2,h3,h4,h5,h6{font-weight:700;font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}section{padding:100px 0}section h2.section-heading{font-size:40px;margin-top:0;margin-bottom:15px}section h3.section-subheading{font-size:16px;font-weight:400;font-style:italic;margin-bottom:75px;text-transform:none;font-family:'Droid Serif',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}@media (min-width:768px){section{padding:150px 0}}.btn{font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';font-weight:700}.btn-xl{font-size:18px;padding:20px 40px}.btn-primary{background-color:#fed136;border-color:#fed136}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{background-color:#fec810!important;border-color:#fec810!important;color:#fff}.btn-primary:active,.btn-primary:focus{-webkit-box-shadow:0 0 0 .2rem rgba(254,209,55,.5)!important;box-shadow:0 0 0 .2rem rgba(254,209,55,.5)!important}::-moz-selection{background:#fed136;text-shadow:none}::selection{background:#fed136;text-shadow:none}img::-moz-selection{background:0 0}img::selection{background:0 0}img::-moz-selection{background:0 0}#mainNav{background-color:#212529}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:#fff;border:0;background-color:#fed136;font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}#mainNav .navbar-brand{color:#fed136;font-family:'Kaushan Script',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}#mainNav .navbar-brand.active,#mainNav .navbar-brand:active,#mainNav .navbar-brand:focus,#mainNav .navbar-brand:hover{color:#fec503}#mainNav .navbar-nav .nav-item .nav-link{font-size:90%;font-weight:400;padding:.75em 0;letter-spacing:1px;color:#fff;font-family:Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#fed136}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top .3s,padding-bottom .3s;transition:padding-top .3s,padding-bottom .3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all .3s;transition:all .3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:#212529}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em;padding:12px 0}}
+
+
+
+
+/* Styling for Progress Bars */
+      @import url("https://fonts.googleapis.com/css?family=Lato");
+.outer {
+  height: 100vh;
+  min-width: 20vw;
+  flex: 1;
+}
+
+.progress {
+  display: inline-flex;
+  height: 100%;
+  padding: 5vh 10%;
+}
+.progress > div {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+.progress > div.left {
+  padding-right: 20px;
+  text-align: right;
+}
+.progress > div.left div:last-of-type:after {
+  display: none;
+}
+.progress > div.left div:after {
+  content: "";
+  background: rgba(51, 51, 51, 0.1);
+  border-radius: 2px;
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  height: 101%;
+  width: 1px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.progress > div.right {
+  padding-left: 20px;
+}
+.progress > div.right div.prev:after {
+  transition: none;
+}
+.progress > div.right div.current {
+  color: #333;
+  font-weight: bold;
+}
+.progress > div.right div.current:before {
+  background: #333;
+  padding: 10px;
+  transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.progress > div.right div.current:after {
+  height: 0%;
+  transition: height .2s ease-out;
+}
+.progress > div.right div.current ~ div {
+  color: #666;
+}
+.progress > div.right div.current ~ div:before {
+  background: #666;
+  padding: 2.5px;
+}
+.progress > div.right div.current ~ div:after {
+  height: 0%;
+  transition: none;
+}
+.progress > div.right div:before {
+  content: "";
+  background: #333;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  transition: padding 0.2s ease;
+}
+.progress > div.right div:after {
+  content: "";
+  background: #333;
+  border-radius: 2px;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  height: 101%;
+  width: 2px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: height 0.2s ease;
+}
+.progress > div div {
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  cursor: default;
+  min-height: 30px;
+}
+.progress > div div:last-of-type {
+  flex: 0;
+}
+
+.progress.dark {
+  background: #333;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  padding: 5vh 10%;
+}
+.progress.dark > div {
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+}
+.progress.dark > div.left {
+  padding-right: 20px;
+  text-align: right;
+}
+.progress.dark > div.left div:last-of-type:after {
+  display: none;
+}
+.progress.dark > div.left div:after {
+  content: "";
+  background: rgba(211, 211, 211, 0.05);
+  border-radius: 2px;
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  height: 101%;
+  width: 1px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.progress.dark > div.right {
+  padding-left: 20px;
+}
+.progress.dark > div.right div.prev:after {
+  transition: none;
+}
+.progress.dark > div.right div.current {
+  color: white;
+  font-weight: bold;
+}
+.progress.dark > div.right div.current:before {
+  background: white;
+  padding: 10px;
+  transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.progress.dark > div.right div.current:after {
+  height: 0%;
+  transition: height .2s ease-out;
+}
+.progress.dark > div.right div.current ~ div {
+  color: #666;
+}
+.progress.dark > div.right div.current ~ div:before {
+  background: #666;
+  padding: 2.5px;
+}
+.progress.dark > div.right div.current ~ div:after {
+  height: 0%;
+  transition: none;
+}
+.progress.dark > div.right div:before {
+  content: "";
+  background: lightgray;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  transition: padding 0.2s ease;
+}
+.progress.dark > div.right div:after {
+  content: "";
+  background: lightgray;
+  border-radius: 2px;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  height: 101%;
+  width: 2px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: height 0.2s ease;
+}
+.progress.dark > div div {
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  cursor: default;
+  min-height: 30px;
+}
+.progress.dark > div div:last-of-type {
+  flex: 0;
+}
+
+.done.current {
+  color: #62af0b !important;
+}
+.done.current:before {
+  background: #62af0b !important;
+}
+
+.dark .done.current {
+  color: lightgreen !important;
+}
+.dark .done.current:before {
+  background: lightgreen !important;
+}
+
+#pBars {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', Arial, sans-serif;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}

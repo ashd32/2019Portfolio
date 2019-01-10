@@ -19,6 +19,11 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
+
+    <!-- Scripts for progress bars -->
+    <!-- <script src="./css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script> -->
+    <script src="./jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -61,16 +66,44 @@
     </div>
 
     <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-        <h3 style="text-align:center;">Parallax Demo</h3>
-        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
-            foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
-            posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
-            dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur
-            aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl
-            dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
-            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
-            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
-            augue etiam maecenas, porta porttitor placerat leo.</p>
+        <!-- Skillset -->
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Skills</h2>
+                        <h3 class="section-subheading text-muted">I'm a Jack of many trades, master of a few...</h3>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-drafting-compass fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">CAD Design</h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Full Stack Web Development</h4>
+
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Consulting</h4>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <div class="bgimg-2">
@@ -92,9 +125,97 @@
     </div>
 
     <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
+        <!-- <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;"> -->
+
+
+            <!--Progress Bars-->
+            <div id="pBars">
+                <div class="outer">
+                    <div class="progress dark">
+                        <div class="left">
+                            <div>Start</div>
+                            <div></div>
+                            <div></div>
+                            <div class="current"></div>
+                            <div>Exercitation</div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="right">
+                            <div class="current">Intro</div>
+                            <div class="">Ipsum dolor</div>
+                            <div>Ament</div>
+                            <div class="">Consectetur</div>
+                            <div>Sed eiusmod</div>
+                            <div>Tempor</div>
+                            <div class="done">Done</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="outer">
+                    <div class="progress">
+                        <div class="left">
+                            <div>Start</div>
+                            <div></div>
+                            <div></div>
+                            <div class="current"></div>
+                            <div>Exercitation</div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="right">
+                            <div class="prev">Intro</div>
+                            <div class="prev">Ipsum dolor</div>
+                            <div class="prev">Ament</div>
+                            <div class="">Consectetur</div>
+                            <div class="current">Sed eiusmod</div>
+                            <div>Tempor</div>
+                            <div class="done">Done</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <script src="./CodePen - Responsive Vertical Progress Steps_files/jquery.min.js"></script> -->
+
+
+
+                <script>
+                    // Test code
+                    $('.progress').each(function (_, progress) {
+                        var steps = $('> div.right > div', progress);
+                        steps.each(function (i, el) {
+                            return $(el).mouseenter(function (e) {
+                                return onHover(el);
+                            });
+                        });
+                        var onHover = function (el) {
+                            steps.removeClass(['current', 'prev']);
+                            el.classList.add('current');
+                            $(el).prevAll().slice(1).addClass('prev');
+                        };
+                    });
+                </script>
+
+
+            </div>
+
+
+
+
+
+
+        <!-- </div> -->
     </div>
 
     <div class="bgimg-1">
