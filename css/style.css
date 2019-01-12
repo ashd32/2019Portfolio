@@ -295,7 +295,15 @@ h3 {
   box-sizing: border-box;
 }
 
+.icons {
+  /* float: left; */
+  display: inline-block;
+  width: 100%;
+}
 
+#logos {
+  max-height: 200px;
+}
 
 
 footer {
