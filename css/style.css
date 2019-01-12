@@ -730,6 +730,76 @@ Modules - reusable parts of our design
 }
 
 
+.perspective {
+  perspective:1000px;
+  transform-style: preserve-3d;
+}
+
+.wrapper {
+  transform-style: preserve-3d;
+  margin: 0 auto;
+  width:320px;
+  height:500px;
+  transition: 1s all ease-in-out;
+  -webkit-transition: 1s all ease-in-out;
+  animation: rotateY infinite 3s ease-in-out alternate;
+}
+
+
+
+@keyframes rotateY {
+  0% {
+     transform: rotateY(25deg) rotateX(-2deg) perspective(2000px);
+  }
+  100% {
+     transform: rotateY(-25deg) rotateX(3deg) perspective(2000px);
+  }
+}
+
+
+.bloc {
+  height: 100%;
+  background: url(http://img0.gtsstatic.com/wallpapers/1229382015548168c3e885e37bb79be5_large.jpeg) no-repeat center center;
+  background-size:cover;
+  position: relative;
+}
+
+.content {
+  transform-style:preserve-3d;
+  transform: translateZ(50px);
+  height: 460px;
+  width: 280px;
+  position: absolute;
+  top: 50px;
+  left: -60px;
+  padding-top:320px;
+  color: #fff;
+  background:rgba(22, 223, 255, 0.6);
+  animation: mooveshadow infinite 3s ease-in-out alternate;
+}
+
+
+@keyframes mooveshadow {
+  0% {
+     box-shadow:-8px 0px 10px rgba(0,0,0,0.3);
+  }
+  100% {
+     box-shadow:8px  0px 10px rgba(0,0,0,0.3);
+  }
+}
+
+.content p {
+  font-size:40px;
+  font-weight:700;
+  position: absolute;
+  left: -50px;
+  top: -10px;
+  background:#fff;
+  color: #000;
+  mix-blend-mode:screen;
+  transform:translateZ(100px);
+  padding: 20px 20px 10px 20px;
+}
 
 footer {
   padding: 25px 0;
