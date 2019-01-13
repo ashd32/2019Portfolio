@@ -17,14 +17,17 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <!-- Custom styles -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/perspectivePlay.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-    <!-- Scripts for timeline -->
+    <!-- Scripts for timeline and perspective play -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./js/perspectivePlay.js"></script>
 
 </head>
 
@@ -202,9 +205,19 @@
         </section>
     </div>
 
+    <!-- Portfolio Gallery -->
     <div id="portfolio" class="bgimg-2">
         <div class="caption">
-            <!-- <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span> -->
+            <div class='wrap'>
+                <div class='card-shadow'></div>
+                <div class='card'>
+                  <div class='card-front'>
+                    <div class='card-title'>3D perspective title</div>
+                    <div class='card-subtitle'>3D perspective subtitle</div>
+                    <div class='card-shine'></div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -362,6 +375,7 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+
 
     <!-- Footer -->
     <footer>
