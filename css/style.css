@@ -254,7 +254,7 @@ section h3.section-subheading {
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  float: left;
+  /* float: left; */
 }
 
 .icons {
