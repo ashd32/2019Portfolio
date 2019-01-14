@@ -806,7 +806,7 @@ Modules - reusable parts of our design
   }
 }
 
-
+/* Perspective Card */
 .bloc {
   height: 100%;
   background: url(http://img0.gtsstatic.com/wallpapers/1229382015548168c3e885e37bb79be5_large.jpeg) no-repeat center center;
@@ -824,7 +824,7 @@ Modules - reusable parts of our design
   left: -60px;
   padding-top: 320px;
   color: #fff;
-  background: rgba(22, 223, 255, 0.6);
+  background: rgba(22, 223, 255);
   animation: mooveshadow infinite 3s ease-in-out alternate;
 }
 
