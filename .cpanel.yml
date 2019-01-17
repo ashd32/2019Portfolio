@@ -5,3 +5,4 @@ deployment:
     -  index.html $DEPLOYPATH
     - /css style.css $DEPLOYPATH
     - /css perspectivePlay.css $DEPLOYPATH
+    - /scss $DEPLOYPATH
