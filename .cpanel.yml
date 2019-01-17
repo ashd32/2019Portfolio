@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/dakotani/public_html/
     -  index.html $DEPLOYPATH
     - /css style.css $DEPLOYPATH
+    - /css perspectivePlay.css $DEPLOYPATH
