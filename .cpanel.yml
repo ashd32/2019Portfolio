@@ -3,6 +3,10 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/dakotani/public_html/
     -  index.html $DEPLOYPATH
+    -  index.haml
+    -  favicon.ico
+    -  .htaccess
+    -  gulpfile.js
     - /css style.css $DEPLOYPATH
     - /css perspectivePlay.css $DEPLOYPATH
     - /scss $DEPLOYPATH
