@@ -968,13 +968,13 @@ ul.social-buttons li a:hover {
 }
 
 .box-01 .inner {
-	background-image: url('../img/htmlcss.jpg');
+	background-image: url('../img/javascript.png');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .box-02 .inner {
-	background-image: url('../img/javascript.png');
+	background-image: url('../img/htmlcss.jpg');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
